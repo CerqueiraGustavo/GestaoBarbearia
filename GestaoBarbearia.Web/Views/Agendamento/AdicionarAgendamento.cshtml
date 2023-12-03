@@ -1,0 +1,51 @@
+﻿@using GestaoBarbearia.Web.ViewModel;
+@model AgendamentoViewModel
+@{
+    ViewData["Title"] = "Formulário de Agendamento";
+}
+
+
+<div class="container mt-5">
+    <h2>@ViewData["Title"]</h2>
+
+    <br />
+    <form asp-action="AdicionarAgendamento" method="post">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="cliente">Cliente:</label>
+                <input type="text" asp-for="Cliente" class="form-control" id="cliente" placeholder="Nome do Cliente">
+            </div>
+        </div>        
+        <br />
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="dataAgendamento">Data de Agendamento:</label>
+                <input type="date" asp-for="DataAgendamento" class="form-control" id="dataAgendamento">
+            </div>
+        </div>
+        <br />
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="descricao">Descrição:</label>
+                <textarea class="form-control" asp-for="Descricao" id="descricao" rows="3" placeholder="Descreva o agendamento"></textarea>
+            </div>
+        </div>      
+        <br />
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="preco">Preço:</label>
+                <input type="text" class="form-control" asp-for="Preco" id="preco" placeholder="Preço">
+            </div>
+        </div>       
+
+        <br />
+        <br />
+        <div class="col-md-12">
+            <button type="submit" class="btn btn-success">Salvar</button>
+            <a class="btn btn-danger" asp-area="" asp-controller="Agendamento" asp-action="Index">Cancelar</a>
+        </div>                
+    </form>
+</div>

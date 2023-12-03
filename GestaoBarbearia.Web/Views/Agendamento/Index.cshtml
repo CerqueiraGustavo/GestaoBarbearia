@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Agendamentos";
+}
+
+<div class="container">
+
+    <h1>@ViewData["Title"]</h1>
+    <br/>
+    <br/>
+
+    <a class="btn btn-success" asp-area="" asp-controller="Agendamento" asp-action="AdicionarAgendamento">Adicionar Agendamento</a>
+    <br />
+    <br />
+
+    @if (Model.Count == 0)
+    {
+        <div class="alert alert-info" role="alert">
+            Adicione um Registro!
+        </div>
+        
+    } else
+    {
+        <table class="table table-striped table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Data</th>
+                    <th scope="col">Cliente</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Preço</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(AgendamentoModel agendamento in Model)
+                {
+                    <tr>
+                        <td>@agendamento.DataAgendamento.ToString("g")</td>
+                        <td>@agendamento.Cliente</td>
+                        <td>@agendamento.Descricao</td>
+                        <td>@agendamento.Preco</td>
+                    </tr>
+                }
+            </tbody>
+        </table>        
+    }
+</div>
