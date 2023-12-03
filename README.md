@@ -35,7 +35,7 @@ Certifique-se de ter os seguintes pré-requisitos instalados:
 1. Clone o repositório:
 
     bash
-    git clone https://github.com/seu-usuario/sistema-agendamento-barbearia.git
+    git clone https://github.com/CerqueiraGustavo/GestaoBarbearia.git
     
 
 2. Abra o projeto no Visual Studio.
@@ -44,19 +44,6 @@ Certifique-se de ter os seguintes pré-requisitos instalados:
 
     bash
     dotnet run
-    
-
-4. Abra o navegador e acesse `http://localhost:5000`.
-
-## Contribuição
-
-Contribuições são bem-vindas! Se você quiser contribuir para o projeto, siga os passos abaixo:
-
-1. Faça o fork do projeto.
-2. Crie uma branch para a sua feature (`git checkout -b feature/nova-feature`).
-3. Faça commit das suas mudanças (`git commit -am 'Adicione nova feature'`).
-4. Faça o push para a branch (`git push origin feature/nova-feature`).
-5. Abra um Pull Request.
 
 ## Licença
 
